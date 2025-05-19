@@ -1,0 +1,13 @@
+[Unit]
+Description=Мониторинг процесса test
+After=network.target
+
+[Service]
+Type=simple
+ExecStart=/usr/local/bin/test-monitor.sh
+Restart=always
+RestartSec=60
+User=root
+
+[Install]
+WantedBy=multi-user.target
